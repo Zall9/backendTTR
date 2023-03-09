@@ -32,7 +32,7 @@ class TrajetService(ServiceBase):
         # Retourner le temps de trajet
         return (temps_trajet / 10) * 2
 
-application = Application([TrajetService], 'mon_app_serveur.soap',
+application = Application([TrajetService], 'info.802.calcul.soap',
                           in_protocol=Soap11(validator='lxml'),
                           out_protocol=Soap11())
 
